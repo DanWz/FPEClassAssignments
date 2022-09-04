@@ -59,7 +59,7 @@ class Menu {
             pick = this.showTopMenuOptions();
         }
 
-        alert(`happy casting!`);
+        alert(`Happy Casting!`);
     }
 
     showTopMenuOptions() {
@@ -85,7 +85,6 @@ class Menu {
     createPreparedSpellList() {
         let list = prompt('What will this Spell list be called');
         this.spellLists.push(new PreparedSpellList(list));
-        console.log(`${this.spellLists[this.spellLists.length -1].name}`)
     }
 
     ManagePreparedSpellList() {
@@ -98,7 +97,6 @@ class Menu {
         + 'Enter the number for the list you would like to view.');
         if (index > -1 && index < this.spellLists.length) {
             this.chosenSpellList = this.spellLists[index]
-            console.log(`you have selected to manage ${this.chosenSpellList.name}`);
             //if (this.chosenSpellList === 'undefined')
             let info = 'Spell List: ' + this.chosenSpellList.name + '\n';
 
@@ -106,7 +104,6 @@ class Menu {
                 info += i + ') ' + this.chosenSpellList.spellList[i].name + ': ' 
                 + this.chosenSpellList.spellList[i].attribute + '\n';
             }
-            console.log(info);
             let selection = this.showSpellListMenuOptions(info);
             while (selection != 0) {
                 switch (selection) {
@@ -168,7 +165,6 @@ class Menu {
 
     viewPreparedSpellLists() {
         let PreparedSpellListString = '';
-        console.log('view spell list');
         if (this.spellLists.length > 0) {
         for (let i = 0; i < this.spellLists.length; i++) {
             PreparedSpellListString += i + ') ' + this.spellLists[i].name + '\n';
