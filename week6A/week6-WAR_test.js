@@ -2,7 +2,7 @@
 var expect = chai.expect;
 //import { createPlayers } from "./week6-WAR.js";
 //const { createPlayers } = require('..week6-WAR');
-
+console.log('Executing Unit tests below:')
 describe ('createPlayers', function() {
     describe('#createPlayers generates new player objects', function() {
         it('should create players and accepts a name for the player', function() {
